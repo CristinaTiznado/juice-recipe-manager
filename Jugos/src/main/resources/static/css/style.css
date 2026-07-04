@@ -1,0 +1,345 @@
+/* ==========================================================================
+   Estilos Generales
+   ========================================================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+    color: #333;
+    font-size: 14px; /* Reducimos la fuente base */
+}
+
+h1, h2, h3, h4 {
+    color: #111;
+}
+
+.main-content {
+    max-width: 950px; /* Contenedor general más angosto */
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+/* ==========================================================================
+   Barra de Navegación (Navbar)
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 25px; /* Menos padding vertical */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-bottom: 2px solid #eaeaea;
+}
+
+.navbar h2 {
+    margin: 0;
+    font-size: 24px; /* Título de barra más pequeño */
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    margin-left: 15px;
+    padding: 6px 10px;
+    font-size: 14px; /* Enlaces más discretos */
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.nav-links a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Requerimiento Oro: Pestaña destacada */
+.nav-links a.active-link {
+    color: #000;
+}
+
+/* ==========================================================================
+   Formularios (Login, Registro, Agregar, Editar)
+   ========================================================================== */
+.form-container {
+    background-color: #ffffff;
+    max-width: 380px; /* Formularios menos anchos */
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 13px; /* Labels más sutiles */
+    font-weight: 600;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 8px 10px; /* Cajas de texto más compactas */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus {
+    border-color: #4f46e5;
+    outline: none;
+}
+
+/* Contenedor para manejar inputs y sus errores */
+.input-error-wrapper {
+    margin-bottom: 10px;
+}
+
+/* Estilos para los mensajes de error de Spring */
+span[id$=".errors"] {
+    color: #dc2626; /* Rojo para alertas */
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    margin-top: 4px;
+}
+
+/* ==========================================================================
+   Botones
+   ========================================================================== */
+button, .btn-primary, .btn-danger, .btn-disabled, .btn-secondary {
+    font-family: inherit;
+    font-size: 13px; /* Botones con texto más pequeño */
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover:not(:disabled), .btn-primary:hover, .btn-danger:hover {
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background-color: #4f46e5;
+    color: white;
+    padding: 8px 16px; /* Botones menos altos */
+}
+
+.btn-danger {
+    background-color: #ef4444;
+    color: white;
+    padding: 8px 16px;
+}
+
+/* Estilos robustos para cualquier botón deshabilitado o con la clase gris */
+button:disabled, .btn-disabled, .btn-secondary {
+    background-color: #6b7280 !important;
+    color: #ffffff !important;
+    padding: 8px 16px;
+    cursor: not-allowed !important;
+    opacity: 1 !important;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+button:hover:not(:disabled), .btn-primary:hover, .btn-danger:hover {
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background-color: #4f46e5; /* Azul vibrante estilo mockup */
+    color: white;
+    padding: 10px 20px;
+}
+
+.btn-danger {
+    background-color: #ef4444; /* Rojo */
+    color: white;
+    padding: 10px 20px;
+}
+
+/* Estilos robustos para cualquier botón deshabilitado o con la clase gris */
+button:disabled, .btn-disabled, .btn-secondary {
+    background-color: #6b7280 !important; /* Gris oscuro para contraste */
+    color: #ffffff !important;
+    padding: 10px 20px;
+    cursor: not-allowed !important;
+    opacity: 1 !important; /* Evita que el navegador lo haga semitransparente */
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   Buscador (Dashboard)
+   ========================================================================== */
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    margin-top: 0;
+}
+
+/* ==========================================================================
+   Grid de Tarjetas (Dashboard)
+   ========================================================================== */
+.lista-jugos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Tarjetas más angostas */
+    gap: 20px;
+}
+
+.card-jugo {
+    background: #ffffff;
+    padding: 15px; /* Menos espacio interno */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.card-jugo h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px; /* Título de la tarjeta menor */
+}
+
+.card-jugo img {
+    width: 100%;
+    height: 180px; /* Imagen de tarjeta más baja */
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.card-jugo {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.card-jugo h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.card-jugo img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-actions form {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Vista de Detalle
+   ========================================================================== */
+.detalle-layout {
+    display: flex;
+    gap: 30px;
+    background: #ffffff;
+    padding: 25px; /* Contenedor de detalle más ajustado */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin-top: 20px;
+}
+
+.detalle-texto {
+    flex: 3;
+}
+
+.detalle-texto h4 {
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.detalle-texto p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.detalle-imagen {
+    flex: 2;
+}
+
+.detalle-imagen img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.detalle-acciones {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.detalle-acciones form {
+    margin: 0;
+}
+
+/* Responsividad básica para pantallas pequeñas */
+@media (max-width: 768px) {
+    .detalle-layout {
+        flex-direction: column-reverse;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+}
