@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 
 import com.cristina_tiznado.jugos.modelos.Jugo;
 import com.cristina_tiznado.jugos.modelos.Usuario;
@@ -36,16 +39,32 @@ public class ControladorJugo {
     // INICIO
 
     @GetMapping("/jugos")
-    public String jugos(HttpSession sesion, Model modelo, @RequestParam(value="filtro", required=false) String filtro){
+    public String jugos(HttpSession sesion, Model modelo, 
+                        @RequestParam(value="filtro", required=false) String filtro,
+                        @RequestParam(defaultValue = "0") int page){
 
         Usuario u = (Usuario) sesion.getAttribute("usuario");
         if(u == null){
             return "redirect:/";
         }
 
+        // Definimos cuántos jugos mostrar por página (ej. 4 para que notes el cambio rápido)
+        int pageSize = 4; 
+        Pageable pageable = PageRequest.of(page, pageSize);
+        Page<Jugo> paginaJugos;
+
+        if(filtro != null && !filtro.trim().isEmpty()){
+            paginaJugos = this.servicioJugo.buscarPorIngrediente(filtro, pageable);
+            modelo.addAttribute("filtroBusqueda", filtro);
+        } else {
+            paginaJugos = this.servicioJugo.obtenerTodosLosJugos(pageable);
+        }
+
         modelo.addAttribute("usuarioLogueado", u);
-        modelo.addAttribute("listaJugos", this.servicioJugo.buscarPorIngrediente(filtro));
-        modelo.addAttribute("filtro", filtro);
+        // .getContent() extrae solo la lista para iterar en el JSP
+        modelo.addAttribute("listaJugos", paginaJugos.getContent()); 
+        modelo.addAttribute("currentPage", page);
+        modelo.addAttribute("totalPages", paginaJugos.getTotalPages());
 
         return "jugos.jsp";
     }

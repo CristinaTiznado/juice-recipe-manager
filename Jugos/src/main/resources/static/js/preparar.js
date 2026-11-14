@@ -7,20 +7,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const boton = formularioPreparar.querySelector("button");
             
-            boton.textContent = "Ya preparé este jugo";
-            boton.className = "btn-secondary";
+            boton.innerHTML = '<i data-lucide="loader-2" class="spin" width="18"></i> Procesando...';
+            boton.className = "btn btn-secondary";
             boton.disabled = true;
+            if(window.lucide) lucide.createIcons();
 
-            fetch(formularioPreparar.action, {
-                method: 'GET',
-            })
+            fetch(formularioPreparar.action, { method: 'GET' })
             .then(respuesta => {
-                if(!respuesta.ok) {
-                    console.error("Hubo un problema al guardar en la base de datos.");
+                if(respuesta.ok) {
+                    boton.innerHTML = '<i data-lucide="check" width="18"></i> Ya preparado';
+                    boton.style.backgroundColor = "var(--brand-light)";
+                    boton.style.color = "var(--brand-dark)";
+                    boton.style.border = "none";
+                    boton.style.opacity = "1";
+                } else {
+                    throw new Error("Problema en BD");
                 }
             })
             .catch(error => {
                 console.error("Error de conexión:", error);
+                boton.innerHTML = "Error al preparar";
+                boton.style.backgroundColor = "var(--danger)";
+                boton.style.color = "white";
+            })
+            .finally(() => {
+                if(window.lucide) lucide.createIcons();
             });
         });
     }

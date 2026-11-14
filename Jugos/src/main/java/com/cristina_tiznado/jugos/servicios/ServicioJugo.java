@@ -3,6 +3,8 @@ package com.cristina_tiznado.jugos.servicios;
 import java.util.HashMap;
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
@@ -19,8 +21,8 @@ public class ServicioJugo {
     private RepositorioJugos repositorioJugos;
 
     // SELECT
-    public List<Jugo> obtenerTodosLosJugos() {
-        return this.repositorioJugos.findAllByOrderByNombreAsc();
+    public Page<Jugo> obtenerTodosLosJugos(Pageable pageable) {
+        return this.repositorioJugos.findAllByOrderByNombreAsc(pageable);
     }
 
     public Jugo obtenerJugoPorId(Long id) {
@@ -31,11 +33,11 @@ public class ServicioJugo {
         return this.repositorioJugos.findByNombre(nombre).orElse(null);
     }
 
-    public List<Jugo> buscarPorIngrediente(String ingrediente) {
+    public Page<Jugo> buscarPorIngrediente(String ingrediente, Pageable pageable) {
         if (ingrediente == null || ingrediente.trim().isEmpty()) {
-            return obtenerTodosLosJugos();
+            return obtenerTodosLosJugos(pageable);
         }
-        return repositorioJugos.findByIngredientesContainingIgnoreCaseOrderByNombreAsc(ingrediente);
+        return repositorioJugos.findByIngredientesContainingIgnoreCaseOrderByNombreAsc(ingrediente, pageable);
     }
 
     public Boolean buscarJugoEnLista(Jugo jugo, Usuario usuario) {
