@@ -26,12 +26,14 @@
 See FreshJuice in action! Below are the full navigation flows for both Desktop and Mobile interfaces, including user authentication, catalog pagination, and CRUD operations.
 
 *Desktop Experience*<br>
-<video src="assets/desktop-demo.mp4" width="800" controls autoplay loop muted></video>
+
+https://github.com/user-attachments/assets/e9f8e21d-1216-4c16-99ad-b773b00d11b3
 
 <br>
 
 *Mobile Experience*<br>
-<video src="assets/mobile-demo.mp4" width="300" controls autoplay loop muted></video>
+
+https://github.com/user-attachments/assets/6a46ebc3-1ccf-4793-9536-a1609d7afd46
 
 ### Empty States
 Custom illustrations and messages when no recipes are found or when the user history is empty, improving UX.
