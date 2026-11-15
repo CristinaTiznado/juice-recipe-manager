@@ -25,13 +25,13 @@
 
 See FreshJuice in action! Below are the full navigation flows for both Desktop and Mobile interfaces, including user authentication, catalog pagination, and CRUD operations.
 
-*Desktop Experience*<br>
+*[Desktop Experience](assets/desktop-demo.mp4)*<br>
 
 https://github.com/user-attachments/assets/e9f8e21d-1216-4c16-99ad-b773b00d11b3
 
 <br>
 
-*Mobile Experience*<br>
+*[Mobile Experience](assets/mobile-demo.mp4)*<br>
 
 https://github.com/user-attachments/assets/6a46ebc3-1ccf-4793-9536-a1609d7afd46
 
