@@ -8,7 +8,7 @@
 ![JSP](https://img.shields.io/badge/JSP-007396?style=for-the-badge&logo=java&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-**FreshJuice** is a Full Stack Java web application designed with a modern SaaS-style architecture. It allows users to create, explore, and track healthy juice and smoothie recipes. Originally developed as part of the Full Stack Java Bootcamp by **Skillnest** and **Banco de Chile**, the project was completely refactored with a custom responsive UI, CSS variables, and server-side pagination to ensure scalability.
+**FreshJuice** is a Full Stack Java web application designed with a modern SaaS-style architecture. It allows users to create, explore, and save healthy juice and smoothie recipes. Originally developed as part of the Full Stack Java Bootcamp by **Skillnest** and **Banco de Chile**, the project was completely refactored with a custom responsive UI, CSS variables, and server-side pagination to ensure scalability.
 
 
 ## ✨ Key Features
@@ -97,6 +97,7 @@ Custom illustrations and messages when no recipes are found or when the user his
 * **User Profiles:** A dedicated "My Profile" section for users to manage their personal information and view their authored recipes.
 * **Likes & Favorites:** Allow users to "like" recipes and easily track their favorites.
 * **Recipe Collections:** Enable users to create custom lists to group recipes by type (e.g., "Summer Smoothies", "Detox Plans").
+* * **History Management:** Allow users to remove recipes directly from their "Prepared" history list.
 
 ---
 *Developed by **Cristina Tiznado** for portfolio display.*
