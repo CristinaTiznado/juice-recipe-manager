@@ -25,13 +25,13 @@
 
 *Experiencia de Escritorio*<br>
 
-<video src="assets/desktop-demo.mp4" width="800" controls autoplay loop muted></video>
+<img src="assets/desktop-demo.gif" width="800" alt="Desktop Demo">
 
 <br>
 
 *Experiencia Móvil*<br>
 
-<video src="assets/mobile-demo.mp4" width="300" controls autoplay loop muted></video>
+<img src="assets/mobile-demo.gif" width="300" alt="Mobile Demo">
 
 ### Estados Vacíos
 Ilustraciones y mensajes personalizados cuando no se encuentran recetas o cuando el historial del usuario está vacío, mejorando la experiencia de usuario (UX).
