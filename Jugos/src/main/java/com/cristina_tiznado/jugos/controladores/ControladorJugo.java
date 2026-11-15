@@ -1,7 +1,5 @@
 package com.cristina_tiznado.jugos.controladores;
 
-import java.util.HashMap;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -48,7 +46,6 @@ public class ControladorJugo {
             return "redirect:/";
         }
 
-        // Definimos cuántos jugos mostrar por página (ej. 4 para que notes el cambio rápido)
         int pageSize = 4; 
         Pageable pageable = PageRequest.of(page, pageSize);
         Page<Jugo> paginaJugos;
@@ -61,7 +58,6 @@ public class ControladorJugo {
         }
 
         modelo.addAttribute("usuarioLogueado", u);
-        // .getContent() extrae solo la lista para iterar en el JSP
         modelo.addAttribute("listaJugos", paginaJugos.getContent()); 
         modelo.addAttribute("currentPage", page);
         modelo.addAttribute("totalPages", paginaJugos.getTotalPages());

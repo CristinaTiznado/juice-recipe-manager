@@ -1,8 +1,5 @@
 package com.cristina_tiznado.jugos.servicios;
 
-import java.util.HashMap;
-import java.util.List;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +9,6 @@ import org.springframework.validation.BindingResult;
 import com.cristina_tiznado.jugos.modelos.Jugo;
 import com.cristina_tiznado.jugos.modelos.Usuario;
 import com.cristina_tiznado.jugos.repositorios.RepositorioJugos;
-import com.cristina_tiznado.jugos.repositorios.RepositorioUsuarios;
 
 @Service
 public class ServicioJugo {
