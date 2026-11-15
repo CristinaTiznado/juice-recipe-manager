@@ -8,7 +8,8 @@
 ![JSP](https://img.shields.io/badge/JSP-007396?style=for-the-badge&logo=java&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-**FreshJuice** es una aplicación web Full Stack en Java diseñada con una arquitectura moderna estilo SaaS. Permite a los usuarios crear, explorar y hacer seguimiento de recetas de jugos y batidos saludables. Desarrollado originalmente como parte del Bootcamp Full Stack Java de **Skillnest** y **Banco de Chile**, el proyecto fue refactorizado por completo con una interfaz responsiva personalizada, variables CSS y paginación desde el servidor para garantizar escalabilidad.
+**FreshJuice** es una aplicación web Full Stack en Java diseñada con una arquitectura moderna estilo SaaS. Permite a los usuarios crear, explorar y guardar recetas de jugos y batidos saludables. Desarrollado originalmente como parte del Bootcamp Full Stack Java de **Skillnest** y **Banco de Chile**, el proyecto fue refactorizado por completo con una interfaz responsiva personalizada, variables CSS y paginación desde el servidor para garantizar escalabilidad.
+
 
 ## ✨ Características Principales
 
@@ -19,19 +20,20 @@
 * ✅ **Historial (Mis Preparados)**: Los usuarios pueden marcar recetas como "preparadas" y visualizarlas en un panel de historial dedicado.
 * 🎨 **Estados Vacíos**: Ilustraciones y mensajes personalizados cuando no se encuentran recetas o cuando el historial del usuario está vacío, mejorando la experiencia de usuario (UX).
 
+
 ## 📸 Demos del Proyecto
 
 ¡Mira FreshJuice en acción! A continuación se muestran los flujos de navegación completos para las interfaces de Escritorio y Móvil, incluyendo la autenticación de usuarios, paginación del catálogo y operaciones CRUD.
 
 *Experiencia de Escritorio*<br>
 
-<img src="assets/desktop-demo.gif" width="800" alt="Desktop Demo">
+https://github.com/user-attachments/assets/e9f8e21d-1216-4c16-99ad-b773b00d11b3
 
 <br>
 
 *Experiencia Móvil*<br>
 
-<img src="assets/mobile-demo.gif" width="300" alt="Mobile Demo">
+https://github.com/user-attachments/assets/6a46ebc3-1ccf-4793-9536-a1609d7afd46
 
 ### Estados Vacíos
 Ilustraciones y mensajes personalizados cuando no se encuentran recetas o cuando el historial del usuario está vacío, mejorando la experiencia de usuario (UX).
@@ -42,12 +44,12 @@ Ilustraciones y mensajes personalizados cuando no se encuentran recetas o cuando
 *Historial Vacío*<br>
 <img src="assets/Empty-State-Preparados.png" width="260">
 
-
 *Dashboard Vacío Versión Móvil*<br>
 <img src="assets/Empty-State-Dashboard-Mobil.png" width="260">
 
 *Historial Vacío Versión Móvil*<br>
 <img src="assets/Empty-State-Preparados-Mobil.png" width="260">
+
 
 ## 🛠️ Tecnologías
 
@@ -56,14 +58,17 @@ Ilustraciones y mensajes personalizados cuando no se encuentran recetas o cuando
 * **Base de Datos:** MySQL.
 * **Íconos:** [Lucide Icons](https://lucide.dev/).
 
+
 ## ⚙️ Configuración de la Base de Datos
 
 1. Abre tu gestor de MySQL.
 2. Crea la base de datos ejecutando:
+   
    ```sql
    CREATE DATABASE jugos_db;
    ```
 3. Verifica que el archivo `src/main/resources/application.properties` tenga tus credenciales locales:
+   
    ```properties
    spring.datasource.url=jdbc:mysql://localhost:3306/jugos_db
    spring.datasource.username=root
@@ -94,6 +99,7 @@ Ilustraciones y mensajes personalizados cuando no se encuentran recetas o cuando
 * **Perfiles de Usuario:** Una sección dedicada de "Mi Perfil" para que los usuarios gestionen su información personal y vean las recetas que han creado.
 * **Me Gusta y Favoritos:** Permitir a los usuarios dar "me gusta" a las recetas y llevar un registro fácil de sus favoritas.
 * **Colecciones de Recetas:** Permitir a los usuarios crear listas personalizadas para agrupar recetas por tipo (ej., "Batidos de Verano", "Planes Detox").
+* **Gestión del Historial:** Permitir a los usuarios eliminar recetas directamente desde su lista de "Preparados".
 
 ---
 *Desarrollado por **Cristina Tiznado** para muestra de portafolio.*
