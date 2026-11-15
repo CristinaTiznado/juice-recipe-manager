@@ -21,43 +21,32 @@
 * 🎨 **Empty States**: Custom illustrations and messages when no recipes are found or when the user history is empty, improving UX.
 
 
-## 📸 Screenshots
+## 📸 Project Demos
 
-### Mobile Views
-A fully native-like mobile experience featuring a custom responsive header, full-width forms, and an interactive sidebar menu.
+See FreshJuice in action! Below are the full navigation flows for both Desktop and Mobile interfaces, including user authentication, catalog pagination, and CRUD operations.
 
-| Mobile Dashboard | Hamburger Menu | Mobile Login | Mobile Register |
-| :---: | :---: | :---: | :---: |
-| <img src="assets/Dashboard-Mobil.png" width="220"> | <img src="assets/Menu-Mobil.png" width="220"> | <img src="assets/Mobile-Login.png" width="220"> | <img src="assets/Mobile-Register.png" width="220"> |
+*Desktop Experience*<br>
+<video src="assets/desktop-demo.mp4" width="800" controls autoplay loop muted></video>
 
-### Authentication
-| Login | Register |
-| :---: | :---: |
-| <img src="assets/Login.png" width="400"> | <img src="assets/Registro.png" width="400"> |
+<br>
 
-### Dashboard & Catalog
-The main catalog features server-side pagination, a search filter, and dynamic author tags.
+*Mobile Experience*<br>
+<video src="assets/mobile-demo.mp4" width="300" controls autoplay loop muted></video>
 
-| Dashboard | Dashboard (Created Recipes) |
-| :---: | :---: |
-| <img src="assets/Dashboard.png" width="400"> | <img src="assets/Dashboard-con-recetas-creadas.png" width="400"> |
+### Empty States
+Custom illustrations and messages when no recipes are found or when the user history is empty, improving UX.
 
-### Recipe Details
-Responsive grid layout that adapts perfectly from desktop to mobile, intelligently repositioning the image under the title on smaller screens.
+*Empty Dashboard*<br>
+<img src="assets/Empty-State-Dashboard.png" width="260">
 
-| Standard Detail | Created Recipe (Edit/Delete) | Prepared Recipe State |
-| :---: | :---: | :---: |
-| <img src="assets/Detalle-Receta.png" width="260"> | <img src="assets/Detalle-Receta-Creada.png" width="260"> | <img src="assets/Detalle-Receta-Preparada.png" width="260"> |
+*Empty History*<br>
+<img src="assets/Empty-State-Preparados.png" width="260">
 
-### CRUD Operations
-| Add Recipe | Edit Recipe | Delete Confirmation |
-| :---: | :---: | :---: |
-| <img src="assets/Agregar.png" width="260"> | <img src="assets/Editar.png" width="260"> | <img src="assets/Confirmacion-Eliminar-Receta.png" width="260"> |
+*Empty Dashboard Mobile Version*<br>
+<img src="assets/Empty-State-Dashboard-Mobil.png" width="260">
 
-### User History & Empty States
-| Prepared Juices | Empty Dashboard | Empty History |
-| :---: | :---: | :---: |
-| <img src="assets/Preparados.png" width="260"> | <img src="assets/Empty-State-Dashboard.png" width="260"> | <img src="assets/Empty-State-Preparados.png" width="260"> |
+*Empty History Mobile Version*<br>
+<img src="assets/Empty-State-Preparados-Mobil.png" width="260">
 
 
 ## 🛠️ Tech Stack

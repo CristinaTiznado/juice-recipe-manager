@@ -102,7 +102,7 @@
                                 <!-- Se agregó 'display: flex' al form para que el botón se centre perfecto -->
                                 <form id="form-preparar" action="/preparar/${jugo.id}" method="GET" style="margin: 0; width: 100%; display: flex;">
                                     <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
-                                        <i data-lucide="blender" width="18"></i> Preparar Jugo
+                                        <i data-lucide="blender" width="18"></i> Preparar
                                     </button>
                                 </form>
                             </c:otherwise>

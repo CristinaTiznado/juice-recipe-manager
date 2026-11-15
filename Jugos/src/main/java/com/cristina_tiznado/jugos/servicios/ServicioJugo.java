@@ -2,6 +2,7 @@ package com.cristina_tiznado.jugos.servicios;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
@@ -9,12 +10,16 @@ import org.springframework.validation.BindingResult;
 import com.cristina_tiznado.jugos.modelos.Jugo;
 import com.cristina_tiznado.jugos.modelos.Usuario;
 import com.cristina_tiznado.jugos.repositorios.RepositorioJugos;
+import com.cristina_tiznado.jugos.repositorios.RepositorioUsuarios;
 
 @Service
 public class ServicioJugo {
 
     @Autowired
     private RepositorioJugos repositorioJugos;
+
+    @Autowired
+    private RepositorioUsuarios repositorioUsuarios;
 
     // SELECT
     public Page<Jugo> obtenerTodosLosJugos(Pageable pageable) {
@@ -68,6 +73,19 @@ public class ServicioJugo {
 
     // DELETE
     public void eliminarJugo(Long id) {
-        this.repositorioJugos.deleteById(id);
+    Jugo jugoAEliminar = this.repositorioJugos.findById(id).orElse(null);
+    
+    if (jugoAEliminar != null) {
+        Iterable<Usuario> todosLosUsuarios = this.repositorioUsuarios.findAll();
+        
+        for (Usuario usuario : todosLosUsuarios) {
+            if (usuario.getJugosPreparados().contains(jugoAEliminar)) {
+                usuario.getJugosPreparados().remove(jugoAEliminar);
+                this.repositorioUsuarios.save(usuario); 
+            }
+        }
+        
+        this.repositorioJugos.delete(jugoAEliminar);
     }
+}
 }

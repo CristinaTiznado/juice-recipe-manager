@@ -10,7 +10,6 @@
 
 **FreshJuice** es una aplicación web Full Stack en Java diseñada con una arquitectura moderna estilo SaaS. Permite a los usuarios crear, explorar y hacer seguimiento de recetas de jugos y batidos saludables. Desarrollado originalmente como parte del Bootcamp Full Stack Java de **Skillnest** y **Banco de Chile**, el proyecto fue refactorizado por completo con una interfaz responsiva personalizada, variables CSS y paginación desde el servidor para garantizar escalabilidad.
 
-
 ## ✨ Características Principales
 
 * 🔐 **Autenticación**: Registro e inicio de sesión de usuarios seguro.
@@ -20,45 +19,35 @@
 * ✅ **Historial (Mis Preparados)**: Los usuarios pueden marcar recetas como "preparadas" y visualizarlas en un panel de historial dedicado.
 * 🎨 **Estados Vacíos**: Ilustraciones y mensajes personalizados cuando no se encuentran recetas o cuando el historial del usuario está vacío, mejorando la experiencia de usuario (UX).
 
+## 📸 Demos del Proyecto
 
-## 📸 Vistas del Proyecto
+¡Mira FreshJuice en acción! A continuación se muestran los flujos de navegación completos para las interfaces de Escritorio y Móvil, incluyendo la autenticación de usuarios, paginación del catálogo y operaciones CRUD.
 
-### Vistas Móviles
-Una experiencia móvil completamente nativa que cuenta con un encabezado responsivo personalizado, formularios de ancho completo y un menú lateral interactivo.
+*Experiencia de Escritorio*<br>
 
-| Dashboard Móvil | Menú Hamburguesa | Login Móvil | Registro Móvil |
-| :---: | :---: | :---: | :---: |
-| <img src="assets/Dashboard-Mobil.png" width="220"> | <img src="assets/Menu-Mobil.png" width="220"> | <img src="assets/Mobile-Login.png" width="220"> | <img src="assets/Mobile-Register.png" width="220"> |
+<video src="assets/desktop-demo.mp4" width="800" controls autoplay loop muted></video>
 
-### Autenticación
-| Iniciar Sesión | Registro |
-| :---: | :---: |
-| <img src="assets/Login.png" width="400"> | <img src="assets/Registro.png" width="400"> |
+<br>
 
-### Dashboard & Catálogo
-El catálogo principal cuenta con paginación desde el servidor, filtro de búsqueda y etiquetas dinámicas de autor.
+*Experiencia Móvil*<br>
 
-| Dashboard | Dashboard (Recetas Propias) |
-| :---: | :---: |
-| <img src="assets/Dashboard.png" width="400"> | <img src="assets/Dashboard-con-recetas-creadas.png" width="400"> |
+<video src="assets/mobile-demo.mp4" width="300" controls autoplay loop muted></video>
 
-### Detalle de Receta
-Diseño de cuadrícula responsivo que se adapta perfectamente de escritorio a móvil, reubicando inteligentemente la imagen debajo del título en pantallas pequeñas.
+### Estados Vacíos
+Ilustraciones y mensajes personalizados cuando no se encuentran recetas o cuando el historial del usuario está vacío, mejorando la experiencia de usuario (UX).
 
-| Detalle Estándar | Receta Creada (Opciones Editar/Eliminar) | Estado Receta Preparada |
-| :---: | :---: | :---: |
-| <img src="assets/Detalle-Receta.png" width="260"> | <img src="assets/Detalle-Receta-Creada.png" width="260"> | <img src="assets/Detalle-Receta-Preparada.png" width="260"> |
+*Dashboard Vacío*<br>
+<img src="assets/Empty-State-Dashboard.png" width="260">
 
-### Operaciones CRUD
-| Agregar Receta | Editar Receta | Confirmar Eliminación |
-| :---: | :---: | :---: |
-| <img src="assets/Agregar.png" width="260"> | <img src="assets/Editar.png" width="260"> | <img src="assets/Confirmacion-Eliminar-Receta.png" width="260"> |
+*Historial Vacío*<br>
+<img src="assets/Empty-State-Preparados.png" width="260">
 
-### Historial de Usuario & Estados Vacíos
-| Jugos Preparados | Dashboard Vacío | Historial Vacío |
-| :---: | :---: | :---: |
-| <img src="assets/Preparados.png" width="260"> | <img src="assets/Empty-State-Dashboard.png" width="260"> | <img src="assets/Empty-State-Preparados.png" width="260"> |
 
+*Dashboard Vacío Versión Móvil*<br>
+<img src="assets/Empty-State-Dashboard-Mobil.png" width="260">
+
+*Historial Vacío Versión Móvil*<br>
+<img src="assets/Empty-State-Preparados-Mobil.png" width="260">
 
 ## 🛠️ Tecnologías
 
@@ -66,7 +55,6 @@ Diseño de cuadrícula responsivo que se adapta perfectamente de escritorio a m�
 * **Frontend:** JSP, JSTL, CSS3 Personalizado (Variables, Flexbox, Grid), JavaScript (Manipulación del DOM para el menú móvil).
 * **Base de Datos:** MySQL.
 * **Íconos:** [Lucide Icons](https://lucide.dev/).
-
 
 ## ⚙️ Configuración de la Base de Datos
 
